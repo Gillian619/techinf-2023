@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastros</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Nome do Site</h1>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <div class="button" onclick="showForm('clientForm')">Cadastro de Cliente</div>
+            <div class="button" onclick="showForm('companyForm')">Cadastro de Empresa</div>
+            <div class="button" onclick="showForm('supplierForm')">Cadastro de Fornecedor</div>
+        </div>
+        <div class="content">
+            <div id="defaultMessage">
+                <h2>Bem Vindo a Pagina De Cadastros</h2>
+                <p>Por favor, selecione uma opção no menu à esquerda.</p>
+            </div>
+            <div id="clientForm" class="form hidden">
+
+                <form>
+                    <h2>Cadastro de cliente</h2>
+                    <label for="nomeCliente">Nome Completo:</label>
+                    <input type="text" id="nomeCliente" name="nomeCliente" required>
+
+                    <label for="cpfCliente">CPF:</label>
+                    <input type="text" id="cnpjCliente" name="cnpjCliente" required>
+
+                    <label for="emailCliente">Email:</label>
+                    <input type="email" id="emailCliente" name="emailCliente" required>
+
+                    <label for="telefoneCliente">Telefone:</label>
+                    <input type="text" id="telefoneCliente" name="telefoneCliente" required>
+
+                    <label for="enderecoCliene">Endereço:</label>
+                    <input type="text" id="enderecoCliente" name="enderecoCliente" required>
+
+                    <button class="button" type="submit">Cadastrar</button>
+                </form>
+            </div>
+            <div id="companyForm" class="form hidden">
+
+                <form>
+                    <h2>Cadastro De Empresa</h2>
+                    <label for="rsocialemp">Razão Social:</label>
+                    <input type="text" id="rsocialemp" name="rsocialemp" required>
+
+                    <label for="cnpjemp">CNPJ:</label>
+                    <input type="text" id="cnpjemp" name="cnpjemp" required>
+
+                    <label for="emailemp">email:</label>
+                    <input type="email" id="emailemp" name="emailemp" required>
+
+                    <label for="telefoneemp">Telefone:</label>
+                    <input type="text" id="telefoneemp" name="telefoneemp" required>
+
+                    <label for="enderecoemp">Endereço:</label>
+                    <input type="text" id="enderecoemp" name="enderecoemp" required>
+
+                    <button class="button" type="submit">Cadastrar</button>
+                </form>
+            </div>
+            <div id="supplierForm" class="form hidden">
+                <form>
+
+                    <h2>Cadastro De Fornecedor</h2>
+                    <label for="rsocialForn">Razão social:</label>
+                    <input type="text" id="rsocialForn" name="rsocialForn" required>
+
+                    <label for="cnpjForn">CNPJ:</label>
+                    <input type="text" id="cnpjForn" name="cnpjForn" required>
+
+                    <label for="emaiForn">Email:</label>
+                    <input type="email" id="emaiForn" name="emaiForn" required>
+
+                    <label for="telefoneForn">Telefone:</label>
+                    <input type="text" id="telefoneForn" name="telefoneForn" required>
+
+                    <label for="enderecoForn">Endereço:</label>
+                    <input type="text" id="enderecoForn" name="enderecoForn" required>
+
+                    <button class="button" type="submit">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</html>
