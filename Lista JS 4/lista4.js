@@ -98,12 +98,19 @@ console.log(somaDigitos(456) === 15)
 console.log(somaDigitos(789) === 24)
 //13. Encontre o maior número em um array
 function maiorArray(array) {
-    return array.map(function (subArray) {
-        return Math.max.apply(null, subArray);
-    });
+    return array.reduce(function (max, current) {
+        return current > max ? current : max;
+    }, -Infinity);
 }
+
 console.log(maiorArray([1, 2, 3, 4, 5]) === 5)
 console.log(maiorArray([-1, -2, -3, -4, -5]) === -1)
 console.log(maiorArray([10, 20, 30, 40, 50]) === 50)
 //14.Remova todos os espaços de uma string
+function removerEspaco(str) {
+    return str.replace(/\s+/g, '');
+}
+console.log(removerEspaco("hello world") === "helloworld");
+console.log(removerEspaco(" a b c ") === "abc");
+console.log(removerEspaco(" ") === "");
 //15.Inverta uma string
