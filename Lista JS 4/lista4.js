@@ -148,5 +148,16 @@ console.log(vogal("javascript") === 3)
 console.log(vogal("aeiou") === 5)
 //19. Desafio Verifique se uma string é um anagrama de outra.
 function anagrama(str1, str2) {
+    str1 = str1.replace(/\s+/g, '').toLowerCase();
+    str2 = str2.replace(/\s+/g, '').toLowerCase();
+    if (str1.length !== str2.length) {
+        return false;
+    }
+    let str1Ordenada = str1.split('').sort().join('');
+    let str2Ordenada = str2.split('').sort().join('');
 
+    return str1Ordenada === str2Ordenada;
 }
+console.log(anagrama("listen", "silent") === true)
+console.log(anagrama("hello", "world") === false)
+console.log(anagrama("evil", "vile") === true)
