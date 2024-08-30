@@ -114,3 +114,21 @@ console.log(removerEspaco("hello world") === "helloworld");
 console.log(removerEspaco(" a b c ") === "abc");
 console.log(removerEspaco(" ") === "");
 //15.Inverta uma string
+function inverta(str) {
+    return str.split('').reverse().join('');
+} console.log(inverta("hello") === "olleh");
+console.log(inverta("world") === "dlrow");
+console.log(inverta("abc") === "cba");
+//16. Desafio Verifique se uma string é um palíndromo
+function palindromo(str) {
+    return str === inverta(str)
+} console.log(palindromo("racecar") === true)
+console.log(palindromo("hello") === false)
+console.log(palindromo("madam") === true)
+
+//17. Desafio Verifique se uma string contém apenas números.
+function vernum() {
+
+}
+//18. Desafio Conte o número de vogais em uma string.
+//19. Desafio Verifique se uma string é um anagrama de outra.
