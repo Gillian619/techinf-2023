@@ -127,8 +127,26 @@ console.log(palindromo("hello") === false)
 console.log(palindromo("madam") === true)
 
 //17. Desafio Verifique se uma string contém apenas números.
-function vernum() {
+function somenteNum(num) {
+    return !isNaN(parseFloat(num)) && isFinite(num);
+}
+console.log(somenteNum("12345") === true)
+console.log(somenteNum("abc123") === false)
+console.log(somenteNum("67890") === true)
+//18. Desafio Conte o número de vogais em uma string.
+function vogal(str) {
+    const vogais = ['a', 'e', 'i', 'o', 'u'];
+    let count = 0
+    for (let c of str) {
+        if (vogais.includes(c)) {
+            count++
+        }
+    }
+    return count
+} console.log(vogal('hello') === 2)
+console.log(vogal("javascript") === 3)
+console.log(vogal("aeiou") === 5)
+//19. Desafio Verifique se uma string é um anagrama de outra.
+function anagrama(str1, str2) {
 
 }
-//18. Desafio Conte o número de vogais em uma string.
-//19. Desafio Verifique se uma string é um anagrama de outra.
